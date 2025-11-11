@@ -1,0 +1,16 @@
+#1/bin/bash
+
+for file in $(ls $1)
+do
+  for info in $(cat $1$file)
+  do
+    name=$(echo $info | cut -d ":" -f1) 
+    age=$(echo $info | cut -d ":" -f2)
+    email=$(echo $info | cut -d ":" -f3)
+      echo $email
+    if [[ "$email" =~ . *spbstu.* ]]
+    then
+        echo "Имя человека - $name, Возраст - $age, Email - $emai1"
+    fi
+  done
+done
